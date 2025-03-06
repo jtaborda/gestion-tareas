@@ -4,14 +4,14 @@
 
   <!-- Formulario para agregar tareas -->
   <div class="agregar-tarea">
-    <input type="text" [(ngModel)]="nuevoTitulo" placeholder="Título" />
-    <input type="text" [(ngModel)]="nuevaDescripcion" placeholder="Descripción" />
+    <input type="text" [(ngModel)]="nuevoTitulo" placeholder="Título" class="input-field" />
+    <input type="text" [(ngModel)]="nuevaDescripcion" placeholder="Descripción" class="input-field" />
 
-    <button (click)="agregarTarea()">Agregar Tarea</button>
+    <button (click)="agregarTarea()" class="btn agregar-btn">Agregar Tarea</button>
   </div>
 
-  <h2>Lista de Tareas</h2>
-  <ul>
+  <h2 class="lista-tareas-titulo">Lista de Tareas</h2>
+  <ul class="lista-tareas">
     <li *ngFor="let tarea of tareas">
       <!-- Usamos el componente Tarea para cada tarea individual -->
       <app-tarea [tarea]="tarea" (tareaEliminada)="eliminarTarea($event)"></app-tarea>

@@ -1,10 +1,102 @@
+/* Estilos generales para el componente tarea */
 .tarea {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px 0;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tarea h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.tarea p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.tarea .estado {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.tarea .estado span {
+  font-weight: normal;
+  color: #007BFF; /* Color azul para el estado */
+}
+
+/* Contenedor de los botones para cambiar estado */
+.botones-estado {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+}
+
+.progreso {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.progreso:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.completada {
+  background-color: #2196F3;
+  color: white;
+}
+
+.completada:hover {
+  background-color: #1976D2;
+  transform: translateY(-2px);
+}
+
+.eliminar {
+  background-color: #f44336;
+  color: white;
+  align-self: flex-start;
+}
+
+.eliminar:hover {
+  background-color: #e53935;
+  transform: translateY(-2px);
+}
+
+/* Añadir un pequeño efecto al pasar el ratón sobre los botones */
+.btn:focus {
+  outline: none;
+}
+
+/* Estilo para mejorar la visualización en dispositivos pequeños */
+@media (max-width: 600px) {
+  .tarea {
+    padding: 15px;
   }
-  
-  button {
-    margin-right: 10px;
+
+  .tarea h3 {
+    font-size: 1.4rem;
   }
-  
+
+  .tarea p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}

@@ -36,8 +36,11 @@ export class TareaComponent {
 
   // Eliminar tarea
   eliminarTarea(): void {
+    const confirmarEliminacion = window.confirm('¿Estás seguro de que deseas eliminar esta tarea?');
+    if (confirmarEliminacion) {
     this.tareaService.eliminarTarea(this.tarea.id).subscribe(() => {
       this.tareaEliminada.emit(this.tarea.id);  // Emitimos el id para que el componente padre lo maneje
     });
+  }
   }
 }

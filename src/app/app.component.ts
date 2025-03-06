@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   tareas: Tarea[] = [];
   nuevaDescripcion: string = ''; 
   nuevoTitulo: string = '';
-
+  mensajeExito ="";
 
   constructor(private tareaService: TareaService) {}
 
@@ -49,6 +49,11 @@ export class AppComponent implements OnInit {
         this.nuevoTitulo = '';
         this.nuevaDescripcion = '';
       });
+
+      this.mensajeExito = '¡Tarea agregada con éxito!';
+      setTimeout(() => {
+        this.mensajeExito = '';
+      }, 3000);
     }
   }
 

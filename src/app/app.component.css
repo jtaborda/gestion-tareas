@@ -1,0 +1,124 @@
+/* Estilos generales de la página */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título principal */
+  h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Formulario de agregar tarea */
+  .agregar-tarea {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .input-field {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .input-field:focus {
+    border-color: #4CAF50;
+  }
+  
+  /* Botón para agregar tarea */
+  .agregar-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .agregar-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .agregar-btn:focus {
+    outline: none;
+  }
+  
+  /* Título de la lista de tareas */
+  .lista-tareas-titulo {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Lista de tareas */
+  .lista-tareas {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .lista-tareas li {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Mejorando la apariencia de cada tarea */
+  .app-tarea {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .app-tarea button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .app-tarea button:hover {
+    background-color: #e53935;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 600px) {
+    .agregar-tarea {
+      gap: 10px;
+    }
+  
+    .input-field {
+      font-size: 0.9rem;
+    }
+  
+    .agregar-btn {
+      font-size: 1rem;
+    }
+  
+    .lista-tareas-titulo {
+      font-size: 1.5rem;
+    }
+  }
+  

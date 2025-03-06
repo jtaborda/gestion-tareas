@@ -1,14 +1,12 @@
 <!-- tarea.component.html -->
 <div class="tarea">
-    <h3>{{ tarea.titulo }}</h3>
-    <p>{{ tarea.descripcion }}</p>
-    <p>Estado: {{ tarea.estado }}</p>
-    
-    <!-- Botones para cambiar el estado de la tarea -->
-    <button (click)="actualizarEstado('activo',tarea)">En Progreso</button>
-    <button (click)="actualizarEstado('completada',tarea)">Completada</button>
-  
-    <!-- Botón para eliminar tarea -->
-    <button (click)="eliminarTarea()">Eliminar</button>
-  </div>
-  
+  <h3 class="titulo">{{ tarea.titulo }}</h3>
+  <p class="descripcion">{{ tarea.descripcion }}</p>
+  <p class="estado">Estado: <span>{{ tarea.estado }}</span></p>
+
+  <!-- Botones para cambiar el estado de la tarea -->
+  <div class="botones-estado">
+    <button (click)="actualizarEstado('activo', tarea)" class="btn progreso">En Progreso</button>
+    <button (click)="actualizarEstado('completada', tarea)" class="btn completada">Completada</button>
+  <button (click)="eliminarTarea()" class="btn eliminar">Eliminar</button>
+</div>
